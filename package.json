@@ -6,6 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "start": "node -r esm -r dotenv/config src",
+    "dev": "nodemon -r esm -r dotenv/config src",
     "code:check": "yarn code:lint; yarn code:format --check",
     "code:clean": "yarn code:lint --fix; yarn code:format --write",
     "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\"",
@@ -13,12 +15,20 @@
     "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "devDependencies": {
+    "nodemon": "^2.0.4",
     "poetic": "^1.5.0"
   },
   "dependencies": {
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^9.4.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11"
+    "koa": "^2.13.0",
+    "lint-staged": "^10.2.11",
+    "log4js": "^6.3.0",
+    "mime-types": "^2.1.27"
   }
 }
