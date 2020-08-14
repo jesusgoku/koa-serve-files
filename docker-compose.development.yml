@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  app:
+    build:
+      target: base
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    env_file: ./.env
+    command: yarn run dev

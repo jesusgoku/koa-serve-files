@@ -2,18 +2,33 @@
 
 Serve files into `/public` folder.
 
-## Setup
+## Setup and Running
 
 ```bash
 cp .env.dist .env
 
 yarn install
+
+# Up for production
+yarn run start
+
+# Or for running in development with auto-restart on file changes
+yarn run dev
 ```
 
-## Running
+## Setup and Running with Docker
 
 ```bash
-yarn run start
+cp .env.dist .env
+
+cp docker-compose.development.yml docker-compose.override.yml
+
+
+# Up for production
+docker-compose -f docker-compose.yml up
+
+# Of ro running in development with auto.restart on file changes
+docker-compose up
 ```
 
 ## Release

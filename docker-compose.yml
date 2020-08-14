@@ -1,0 +1,8 @@
+version: '3.6'
+
+services:
+  app:
+    image: jesusgoku/serve-files:${IMAGE_VERSION:-latest}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
