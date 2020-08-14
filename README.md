@@ -10,8 +10,14 @@ cp .env.dist .env
 yarn install
 ```
 
-# Running
+## Running
 
 ```bash
 yarn run start
+```
+
+## Release
+
+```bash
+yarn run release
 ```
