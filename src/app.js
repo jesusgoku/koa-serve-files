@@ -6,7 +6,11 @@ import routes from './routes';
 
 const app = new Koa();
 
-app.use(cors());
+app.use(
+  cors({
+    exposeHeaders: ['Content-Disposition'],
+  }),
+);
 
 app.use(middleware.handleErrors);
 
